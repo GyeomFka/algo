@@ -16,7 +16,7 @@ public class Multiple {
     public static void printByTimes(int untilTimes) {
         for(int i = 1; i <= untilTimes; i++) {
             print(i, untilTimes);
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 
