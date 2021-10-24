@@ -18,7 +18,7 @@ class MultipleTest {
 
     @Test
     void 단순_구구단_출력() {
-
+        assertThat(1).isEqualTo(1);
     }
 
 
