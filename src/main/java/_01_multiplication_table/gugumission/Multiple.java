@@ -1,4 +1,4 @@
-package gugumission;
+package _01_multiplication_table.gugumission;
 
 public class Multiple {
 

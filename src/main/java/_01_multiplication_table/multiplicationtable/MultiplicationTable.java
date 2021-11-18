@@ -1,6 +1,4 @@
-package multiplicationtable;
-
-import org.w3c.dom.ranges.Range;
+package _01_multiplication_table.multiplicationtable;
 
 import java.util.Scanner;
 

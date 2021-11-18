@@ -1,4 +1,4 @@
-package multiplicationtable;
+package _01_multiplication_table.multiplicationtable;
 
 public class MultipleArray {
 
