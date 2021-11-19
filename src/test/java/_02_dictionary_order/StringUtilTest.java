@@ -4,11 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-/*
-s1 먼저인 문자 -> 음수 반환
-s2 먼저인 문자 -> 양수 반환
-같은 문자 -> 0 반환
-*/
 
 class StringUtilTest {
 
@@ -17,7 +12,6 @@ class StringUtilTest {
     @BeforeEach
     void setup() {
         util = new StringUtil();
-
     }
 
     @Test
@@ -42,15 +36,46 @@ class StringUtilTest {
         char[] s2 = "samplz".toCharArray();
         char[] s3 = "sample".toCharArray();
 
-        int result = util.compareUntilSameLength(s1, s2);
+        int cnt = Math.min(s1.length, s2.length);
+
+        int result = util.compareUntilSameLength(s1, s2, cnt);
         assertThat(result).isLessThan(0);
 
-        int result_2 = util.compareUntilSameLength(s2, s1);
+        int result_2 = util.compareUntilSameLength(s2, s1, cnt);
         assertThat(result_2).isGreaterThan(0);
 
-        int result_3 = util.compareUntilSameLength(s1, s3);
+        int result_3 = util.compareUntilSameLength(s1, s3, cnt);
         assertThat(result_3).isEqualTo(0);
     }
+
+    @Test
+    void 다른_자리수_까지의_비교() {
+        char[] s1 = "aaa".toCharArray();
+        char[] s2 = "aab".toCharArray();
+
+        char[] s3 = "app".toCharArray();
+        char[] s4 = "apple".toCharArray();
+
+        int result = util.compareDictiononary(s3, s4);
+        //return -1;
+        assertThat(result).isLessThan(0);
+
+        int result_2 = util.compareDictiononary(s3, s3);
+        assertThat(result_2).isEqualTo(0);
+
+        int result_3 = util.compareDictiononary(s1, s2);
+        assertThat(result_3).isLessThan(0);
+
+        int result_4 = util.compareDictiononary(s2, s1);
+        assertThat(result_4).isGreaterThan(0);
+
+
+    }
+
+
+
+
+
 
 
 
