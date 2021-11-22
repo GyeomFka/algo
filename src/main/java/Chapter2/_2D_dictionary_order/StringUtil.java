@@ -1,4 +1,4 @@
-package _02_dictionary_order;
+package Chapter2._2D_dictionary_order;
 
 public class StringUtil {
  	static char[] s1;

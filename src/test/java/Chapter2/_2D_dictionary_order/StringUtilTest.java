@@ -1,4 +1,4 @@
-package _02_dictionary_order;
+package Chapter2._2D_dictionary_order;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
