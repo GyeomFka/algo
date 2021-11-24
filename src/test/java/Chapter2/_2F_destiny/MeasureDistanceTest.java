@@ -23,7 +23,7 @@ class MeasureDistanceTest {
     }
 
     @Test
-    void 두_점_사이의_거리() {
+    void 두_점_사이의_거리_구하고_소수점_처리() {
         measureDistance = new MeasureDistance(
                 new Point2D[]{ new Point2D(0,0), new Point2D(1,1) }
         );
@@ -31,6 +31,10 @@ class MeasureDistanceTest {
         double distance = measureDistance.getDistanceTo(measureDistance.getStars()[0], measureDistance.getStars()[1]);
 
         assertThat(distance).isEqualTo(1.4);
+    }
+
+    @Test
+    void 주워진_좌표_배열_연산_틀_만들기() {
 
     }
 
