@@ -68,7 +68,7 @@ class BubbleSortTest {
 
     @Test
     void 조건식에_맞춘_원소_정렬() {
-        data = new int[]{2, 1, 5, 3, 4};
+        data = new int[]{5, 4, 2, 3, 1};
 
         bs.bubbleSort(data);
 
