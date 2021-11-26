@@ -1,12 +1,6 @@
 package Chapter2._2G_bubble_sort;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class BubbleSort {
-
-    List a = new ArrayList<Integer>();
 
     public void bubbleSort(int[] data) {
         while (!isSorted(data)) {
