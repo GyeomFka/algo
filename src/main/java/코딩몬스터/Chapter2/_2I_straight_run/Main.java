@@ -21,7 +21,8 @@ public class Main {
 
     public boolean isStraighted(int[] data) {
         for (int i = 0; i < data.length - 1; i++) {
-            if(data[i+1] != data[i] + 1) {
+			boolean isNy = data[i + 1] != data[i] + 1;
+			if(isNy) {
                 return false;
             }
         }
